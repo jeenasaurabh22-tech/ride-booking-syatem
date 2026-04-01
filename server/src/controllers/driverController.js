@@ -33,6 +33,7 @@ const updateLocation = async (req, res) => {
 
     onlineDrivers.set(driverId, {
       driverId,
+      name: req.user.name,
       city: finalCity,
       lat,
       lng,

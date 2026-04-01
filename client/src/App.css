@@ -1,0 +1,344 @@
+/* Additional App-specific styles */
+
+.grid-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Booking form specific */
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booking-form label {
+  margin-bottom: 2px;
+}
+
+/* Stats/Status panel */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* City autocomplete styling */
+
+.city-autocomplete-container {
+  position: relative;
+}
+
+.city-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.city-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.city-item:last-child {
+  border-bottom: none;
+}
+
+.city-item:hover {
+  background: linear-gradient(135deg, rgba(214, 120, 43, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.city-item.selected {
+  background: linear-gradient(135deg, rgba(214, 120, 43, 0.1) 0%, rgba(255, 107, 53, 0.1) 100%);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Ride Details Card */
+
+.ride-details {
+  background: linear-gradient(135deg, rgba(6, 214, 160, 0.08) 0%, rgba(6, 214, 160, 0.04) 100%);
+  border: 2px solid var(--success);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+  animation: slideUp 0.4s ease;
+}
+
+.ride-details h4 {
+  font-size: 0.95rem;
+  color: var(--success);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.route-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.route-info .from-to {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.route-info .separator {
+  color: var(--text-soft);
+}
+
+/* Driver Profile in Live Tracking */
+
+.driver-profile {
+  background: linear-gradient(135deg, #f7f2e7 0%, #fce4ec 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: start;
+}
+
+.driver-avatar-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d6782b, #ff6b35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.driver-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.driver-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.driver-vehicle {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.driver-rating {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Distance Timer */
+
+.live-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  background: linear-gradient(135deg, #f7f2e7 0%, #fce4ec 100%);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+}
+
+.live-metric-label {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.live-metric-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Action buttons */
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  width: 100%;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.ghost {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(43, 41, 38, 0.18);
+}
+
+.dashboard-shell {
+  min-height: 100vh;
+  padding: 28px 40px 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.topbar p {
+  margin: 5px 0 0;
+  color: var(--text-soft);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.panel {
+  background: rgba(251, 248, 242, 0.86);
+  border: 1px solid rgba(43, 41, 38, 0.12);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(42, 39, 35, 0.08);
+}
+
+.panel h3 {
+  margin: 0 0 12px;
+  font-size: 1.18rem;
+}
+
+.panel.full {
+  grid-column: 1 / -1;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid rgba(43, 41, 38, 0.12);
+  padding: 12px 0;
+}
+
+.metric span {
+  color: var(--text-soft);
+}
+
+.metric strong {
+  text-align: right;
+}
+
+.field-wrap {
+  position: relative;
+}
+
+.suggestions-panel {
+  position: absolute;
+  top: 82px;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  border: 1px solid rgba(43, 41, 38, 0.15);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  width: 100%;
+  text-align: left;
+  border-radius: 0;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid rgba(43, 41, 38, 0.08);
+}
+
+.suggestion-item:hover {
+  background: rgba(245, 227, 194, 0.4);
+}
+
+.error-text {
+  color: #c31c1c;
+  margin: 8px 0;
+}
+
+@media (max-width: 900px) {
+  .auth-shell {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .dashboard-shell {
+    padding: 18px;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
